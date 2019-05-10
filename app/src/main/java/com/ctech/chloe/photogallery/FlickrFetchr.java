@@ -18,7 +18,7 @@ import java.util.List;
 public class FlickrFetchr {
 
     private static final String TAG = "FlickrFetchr";
-    private static final String API_KEY = "YourAPIKeyGoesHere";
+    private static final String API_KEY = "c1ff14517ead472c7696f04527926e7b";
 
     public byte[] getUrlBytes(String urlSpec) throws IOException {
         URL url = new URL(urlSpec);
@@ -80,7 +80,7 @@ public class FlickrFetchr {
         JSONObject photosJsonObject = jsonBody.getJSONObject("photos");
         JSONArray photoJsonArray = photosJsonObject.getJSONArray("photo");
 
-        for (int i = 0; i <photoJsonArray.length(); i++) {
+        for (int i = 0; i < photoJsonArray.length(); i++) {
             JSONObject photoJsonObject = photoJsonArray.getJSONObject(i);
 
             GalleryItem item = new GalleryItem();
